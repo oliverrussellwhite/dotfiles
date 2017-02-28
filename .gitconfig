@@ -1,0 +1,36 @@
+[core]
+  editor = mate -w
+  excludesfile = "~/.gitignore"
+
+[user]
+  name = Oliver Russell White
+  email = fortandlangley@gmail.com
+
+[merge]
+  tool = opendiff
+
+[mergetool]
+  keepBackup = false
+
+[mergetool "opendiff"]
+  cmd = "opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\""
+  trustExitCode = false
+
+[diff]
+  tool = opendiff
+
+[difftool "opendiff"]
+  cmd = "opendiff \"$LOCAL\" \"$REMOTE\""
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = cyan reverse
+  local = cyan
+  remote = cyan dim
+
+[color "status"]
+  added = green
+  changed = cyan
+  untracked = red
