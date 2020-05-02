@@ -1,3 +1,5 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 echo_git_branch () {
 	BRANCH=$(git symbolic-ref --short HEAD 2> /dev/null)
 	if [[ -n $BRANCH ]]; then echo " $BRANCH"; fi
